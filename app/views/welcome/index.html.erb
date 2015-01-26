@@ -4,6 +4,10 @@
 
 <title>Harstone Electrical Services, Cleveland Ohio</title>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+
 <meta name="MSSmartTagsPreventParsing" content="false">
 <meta name="description" content="Harstone Electrical Services, where you can get ">
 <meta name="keywords" content="Electrical, Contractor, Cleveland Ohio, Electrical Contractor, Cuyahoga County, Summit County, Portage County, Lake County, Medina County, Lorain County, residential electrician, commerical electrician">
@@ -46,214 +50,9 @@ function FP_getObjectByID(id,o) {//v1.0
 // -->
 
 var types = ["EMT_conduit", "rigid_aluminum", "rigid_galav", "PVC", "greenfield", "sealtite", "unistrut_shallow", "unistrut_deep",
-             "1_hole_straps", "box_connectors", "couplings", "min_lax", "strut_clip", "straight_fitting", "90_*_fitting", 
+             "1_hole_straps", "box_connectors", "couplings", "min_lax", "strut_clip", "straight_fitting", "90_*_fitting",
              "threaded_rod"];
 var sizes = ["1/2in", "3/4in", "1in", "1_1/2in", "1_3/4in", "2in", "2_1/2in", "2_3/4in", "3in", "3_1/2in", "3_3/4in", "4in"];
-var prices = new Array();
-prices['1/2in_EMT_conduit'] = 0.00;
-prices['1/2in_rigid_aluminum'] = 0.00;
-prices['1/2in_rigid_galav'] = 0.00;
-prices['1/2in_PVC'] = 0.00;
-prices['1/2in_greenfield'] = 0.00;
-prices['1/2in_sealtite'] = 0.00;
-prices['1/2in_unistrut_shallow'] = 0.00;
-prices['1/2in_unistrut_deep'] = 0.00;
-prices['1/2in_1_hole_straps'] = 0.00;
-prices['1/2in_box_connectors'] = 0.00;
-prices['1/2in_couplings'] = 0.00;
-prices['1/2in_min_lax'] = 0.00;
-prices['1/2in_strut_clip'] = 0.00;
-prices['1/2in_straight_fitting'] = 0.00;
-prices['1/2in_90_*_fitting'] = 0.00;
-prices['1/2in_threaded_rod'] = 0.00;
-
-prices['3/4in_EMT_conduit'] = 0.00;
-prices['3/4in_rigid_aluminum'] = 0.00;
-prices['3/4in_rigid_galav'] = 0.00;
-prices['3/4in_PVC'] = 0.00;
-prices['3/4in_greenfield'] = 0.00;
-prices['3/4in_sealtite'] = 0.00;
-prices['3/4in_unistrut_shallow'] = 0.00;
-prices['3/4in_unistrut_deep'] = 0.00;
-prices['3/4in_1_hole_straps'] = 0.00;
-prices['3/4in_box_connectors'] = 0.00;
-prices['3/4in_couplings'] = 0.00;
-prices['3/4in_min_lax'] = 0.00;
-prices['3/4in_strut_clip'] = 0.00;
-prices['3/4in_straight_fitting'] = 0.00;
-prices['3/4in_90_*_fitting'] = 0.00;
-prices['3/4in_threaded_rod'] = 0.00;
-
-prices['1in_EMT_conduit'] = 0.00;
-prices['1in_rigid_aluminum'] = 0.00;
-prices['1in_rigid_galav'] = 0.00;
-prices['1in_PVC'] = 0.00;
-prices['1in_greenfield'] = 0.00;
-prices['1in_sealtite'] = 0.00;
-prices['1in_unistrut_shallow'] = 0.00;
-prices['1in_unistrut_deep'] = 0.00;
-prices['1in_1_hole_straps'] = 0.00;
-prices['1in_box_connectors'] = 0.00;
-prices['1in_couplings'] = 0.00;
-prices['1in_min_lax'] = 0.00;
-prices['1in_strut_clip'] = 0.00;
-prices['1in_straight_fitting'] = 0.00;
-prices['1in_90_*_fitting'] = 0.00;
-prices['1in_threaded_rod'] = 0.00;
-
-prices['1_1/2in_EMT_conduit'] = 0.00;
-prices['1_1/2in_rigid_aluminum'] = 0.00;
-prices['1_1/2in_rigid_galav'] = 0.00;
-prices['1_1/2in_PVC'] = 0.00;
-prices['1_1/2in_greenfield'] = 0.00;
-prices['1_1/2in_sealtite'] = 0.00;
-prices['1_1/2in_unistrut_shallow'] = 0.00;
-prices['1_1/2in_unistrut_deep'] = 0.00;
-prices['1_1/2in_1_hole_straps'] = 0.00;
-prices['1_1/2in_box_connectors'] = 0.00;
-prices['1_1/2in_couplings'] = 0.00;
-prices['1_1/2in_min_lax'] = 0.00;
-prices['1_1/2in_strut_clip'] = 0.00;
-prices['1_1/2in_straight_fitting'] = 0.00;
-prices['1_1/2in_90_*_fitting'] = 0.00;
-prices['1_1/2in_threaded_rod'] = 0.00;
-
-prices['1_3/4in_EMT_conduit'] = 0.00;
-prices['1_3/4in_rigid_aluminum'] = 0.00;
-prices['1_3/4in_rigid_galav'] = 0.00;
-prices['1_3/4in_PVC'] = 0.00;
-prices['1_3/4in_greenfield'] = 0.00;
-prices['1_3/4in_sealtite'] = 0.00;
-prices['1_3/4in_unistrut_shallow'] = 0.00;
-prices['1_3/4in_unistrut_deep'] = 0.00;
-prices['1_3/4in_1_hole_straps'] = 0.00;
-prices['1_3/4in_box_connectors'] = 0.00;
-prices['1_3/4in_couplings'] = 0.00;
-prices['1_3/4in_min_lax'] = 0.00;
-prices['1_3/4in_strut_clip'] = 0.00;
-prices['1_3/4in_straight_fitting'] = 0.00;
-prices['1_3/4in_90_*_fitting'] = 0.00;
-prices['1_3/4in_threaded_rod'] = 0.00;
-
-prices['2in_EMT_conduit'] = 0.00;
-prices['2in_rigid_aluminum'] = 0.00;
-prices['2in_rigid_galav'] = 0.00;
-prices['2in_PVC'] = 0.00;
-prices['2in_greenfield'] = 0.00;
-prices['2in_sealtite'] = 0.00;
-prices['2in_unistrut_shallow'] = 0.00;
-prices['2in_unistrut_deep'] = 0.00;
-prices['2in_1_hole_straps'] = 0.00;
-prices['2in_box_connectors'] = 0.00;
-prices['2in_couplings'] = 0.00;
-prices['2in_min_lax'] = 0.00;
-prices['2in_strut_clip'] = 0.00;
-prices['2in_straight_fitting'] = 0.00;
-prices['2in_90_*_fitting'] = 0.00;
-prices['2in_threaded_rod'] = 0.00;
-
-prices['2_1/2in_EMT_conduit'] = 0.00;
-prices['2_1/2in_rigid_aluminum'] = 0.00;
-prices['2_1/2in_rigid_galav'] = 0.00;
-prices['2_1/2in_PVC'] = 0.00;
-prices['2_1/2in_greenfield'] = 0.00;
-prices['2_1/2in_sealtite'] = 0.00;
-prices['2_1/2in_unistrut_shallow'] = 0.00;
-prices['2_1/2in_unistrut_deep'] = 0.00;
-prices['2_1/2in_1_hole_straps'] = 0.00;
-prices['2_1/2in_box_connectors'] = 0.00;
-prices['2_1/2in_couplings'] = 0.00;
-prices['2_1/2in_min_lax'] = 0.00;
-prices['2_1/2in_strut_clip'] = 0.00;
-prices['2_1/2in_straight_fitting'] = 0.00;
-prices['2_1/2in_90_*_fitting'] = 0.00;
-prices['2_1/2in_threaded_rod'] = 0.00;
-
-prices['2_3/4in_EMT_conduit'] = 0.00;
-prices['2_3/4in_rigid_aluminum'] = 0.00;
-prices['2_3/4in_rigid_galav'] = 0.00;
-prices['2_3/4in_PVC'] = 0.00;
-prices['2_3/4in_greenfield'] = 0.00;
-prices['2_3/4in_sealtite'] = 0.00;
-prices['2_3/4in_unistrut_shallow'] = 0.00;
-prices['2_3/4in_unistrut_deep'] = 0.00;
-prices['2_3/4in_1_hole_straps'] = 0.00;
-prices['2_3/4in_box_connectors'] = 0.00;
-prices['2_3/4in_couplings'] = 0.00;
-prices['2_3/4in_min_lax'] = 0.00;
-prices['2_3/4in_strut_clip'] = 0.00;
-prices['2_3/4in_straight_fitting'] = 0.00;
-prices['2_3/4in_90_*_fitting'] = 0.00;
-prices['2_3/4in_threaded_rod'] = 0.00;
-
-prices['3in_EMT_conduit'] = 0.00;
-prices['3in_rigid_aluminum'] = 0.00;
-prices['3in_rigid_galav'] = 0.00;
-prices['3in_PVC'] = 0.00;
-prices['3in_greenfield'] = 0.00;
-prices['3in_sealtite'] = 0.00;
-prices['3in_unistrut_shallow'] = 0.00;
-prices['3in_unistrut_deep'] = 0.00;
-prices['3in_1_hole_straps'] = 0.00;
-prices['3in_box_connectors'] = 0.00;
-prices['3in_couplings'] = 0.00;
-prices['3in_min_lax'] = 0.00;
-prices['3in_strut_clip'] = 0.00;
-prices['3in_straight_fitting'] = 0.00;
-prices['3in_90_*_fitting'] = 0.00;
-prices['3in_threaded_rod'] = 0.00;
-
-prices['3_1/2in_EMT_conduit'] = 0.00;
-prices['3_1/2in_rigid_aluminum'] = 0.00;
-prices['3_1/2in_rigid_galav'] = 0.00;
-prices['3_1/2in_PVC'] = 0.00;
-prices['3_1/2in_greenfield'] = 0.00;
-prices['3_1/2in_sealtite'] = 0.00;
-prices['3_1/2in_unistrut_shallow'] = 0.00;
-prices['3_1/2in_unistrut_deep'] = 0.00;
-prices['3_1/2in_1_hole_straps'] = 0.00;
-prices['3_1/2in_box_connectors'] = 0.00;
-prices['3_1/2in_couplings'] = 0.00;
-prices['3_1/2in_min_lax'] = 0.00;
-prices['3_1/2in_strut_clip'] = 0.00;
-prices['3_1/2in_straight_fitting'] = 0.00;
-prices['3_1/2in_90_*_fitting'] = 0.00;
-prices['3_1/2in_threaded_rod'] = 0.00;
-
-
-prices['3_3/4in_EMT_conduit'] = 0.00;
-prices['3_3/4in_rigid_aluminum'] = 0.00;
-prices['3_3/4in_rigid_galav'] = 0.00;
-prices['3_3/4in_PVC'] = 0.00;
-prices['3_3/4in_greenfield'] = 0.00;
-prices['3_3/4in_sealtite'] = 0.00;
-prices['3_3/4in_unistrut_shallow'] = 0.00;
-prices['3_3/4in_unistrut_deep'] = 0.00;
-prices['3_3/4in_1_hole_straps'] = 0.00;
-prices['3_3/4in_box_connectors'] = 0.00;
-prices['3_3/4in_couplings'] = 0.00;
-prices['3_3/4in_min_lax'] = 0.00;
-prices['3_3/4in_strut_clip'] = 0.00;
-prices['3_3/4in_straight_fitting'] = 0.00;
-prices['3_3/4in_90_*_fitting'] = 0.00;
-prices['3_3/4in_threaded_rod'] = 0.00;
-
-prices['4in_EMT_conduit'] = 0.00;
-prices['4in_rigid_aluminum'] = 0.00;
-prices['4in_rigid_galav'] = 0.00;
-prices['4in_PVC'] = 0.00;
-prices['4in_greenfield'] = 0.00;
-prices['4in_sealtite'] = 0.00;
-prices['4in_unistrut_shallow'] = 0.00;
-prices['4in_unistrut_deep'] = 0.00;
-prices['4in_1_hole_straps'] = 0.00;
-prices['4in_box_connectors'] = 0.00;
-prices['4in_couplings'] = 0.00;
-prices['4in_min_lax'] = 0.00;
-prices['4in_strut_clip'] = 0.00;
-prices['4in_straight_fitting'] = 0.00;
-prices['4in_90_*_fitting'] = 0.00;
-prices['4in_threaded_rod'] = 0.00;
 
 var feet_types = new Array();
 feet_types['#_16_THHN'] = 0.10;
@@ -287,118 +86,6 @@ feet_types['10/2'] = 2.00;
 feet_types['10/3'] = 0.00;
 feet_types['10/4'] = 0.00;
 
-
-function loadPopupHelper() {
-  var table_string = "<table><tr><th></th>";
-  for (column = 0; column < sizes.length; column++)
-  {
-    if(column % 2 == 0)
-      table_string += "<th class='top'>";
-    else
-      table_string += "<th class='top alt'>";
-    
-    table_string += sizes[column].replace("ft", "'").replace('in', '"').replace("_", " ");
-    table_string += "</th>";
-  }
-  table_string += "</tr>";
-  for (row = 0; row < types.length; row++)
-  {
-    if(row % 2 == 0)
-      table_string += "<tr><th>";
-    else
-      table_string += "<tr class='alt'><th>";
-    
-    table_string += types[row].replace("_", " ");
-    table_string += "</th>";
-    for (column = 0; column < sizes.length; column++)
-    {
-      var input_tag = prices[sizes[column] + "_" + types[row]] + " x " + "<input class='qty' type='text' size=3 "
-           + "id='" + sizes[column] + "_" + types[row] + "' onblur='submit_popup();' />";
-
-      if(column % 2 != 0 && row % 2 != 0)
-        table_string += "<td class='dark'>";
-      else if(column % 2 == 0)
-        table_string += "<td>";
-      else
-        table_string += "<td class='alt'>";
-
-      table_string += input_tag;
-      table_string += "</td>";
-    }
-    table_string += "</tr>";
-  }
-  table_string += "</table>";
-  document.getElementById('popup_table').innerHTML = table_string;
-}
-
-function load_feet() {
-  var new_table = 10;
-
-
-  var table_string = "<table><tr><th></th><th>price</th><th>amount</th></tr>";
-  var index = 0;
-  for (var key in feet_types) {
-    if (index % new_table == 0 && index > 0)
-      table_string += "</table><table><tr><th></th><th>price</th><th>amount</th></tr>";
-
-    if(index % 2 == 0)
-      table_string += "<tr>";
-    else
-      table_string += "<tr class='alt'>";
-
-    table_string += "<th>" + key.replace('_', ' ').replace('_', ' ') + "</th>"
-    table_string += "<td>" + feet_types[key] + "</td>"
-    table_string += "<td><input id=" + key + " class='qty' size=5 onblur='submit_popup();' /></td>"
-    table_string += "</tr>";
-    index++;
-  }
-  table_string += "</table>"
-
-  document.getElementById('feet_table').innerHTML = table_string;
-}
-
-function submit_popup() {
-  var text = "";
-
-  for (row = 0; row < sizes.length; row++)
-  {
-    for (column = 0; column < types.length; column++)
-    {
-      var input_tag = sizes[row] + "_" + types[column];
-      var val = document.getElementById(input_tag);
-      if(val.value != '')
-      {
-        prices[input_tag];
-        
-        text += (val.value + " ");
-        text += (sizes[row] + " ");
-        text += (types[column] + " -");
-        var amount = parseInt(val.value) * parseFloat(prices[sizes[row] + "_" + types[column]]);
-        amount = Math.round(amount*Math.pow(10,2))/Math.pow(10,2);
-        text += (amount + ", ");
-      }
-    }
-  }
-
-  for (var key in feet_types) {
-    var feet_val = document.getElementById(key);
-    if(feet_val.value != '') {
-      text += (feet_val.value + "' ");
-      text += (key + " -");
-      var amount = parseInt(feet_val.value) * parseFloat(feet_types[key]);
-      amount = Math.round(amount*Math.pow(10,2))/Math.pow(10,2);
-      text += (amount + ", ");
-    }
-  }
-
-  while(text.indexOf("in") >= 0 || text.indexOf("ft") >= 0 || text.indexOf("_") >= 0) 
-  {
-    text = text.replace("ft", "'").replace('in', '"').replace('_', ' ');
-  }
-
-  document.getElementById('field-dcadf34b4948181').value = text.substring(0, text.length - 2);
-}
-
 function show_element(element_name) {
   document.getElementById(element_name).style.visibility = 'visible';
 }
@@ -421,20 +108,20 @@ function toggle_show(element_name) {
 <style>
   .close {
     font-family: Arial;
-    position: absolute; 
-    top:0; 
-    right: 0; 
+    position: absolute;
+    top:0;
+    right: 0;
     margin: 5px 5px;
   }
 
   .close:hover {
     font-weight: bold;
     cursor: pointer;
-  } 
+  }
 
   .popup_table {
   }
-  
+
   .item_picker {
   }
 
@@ -476,7 +163,7 @@ function toggle_show(element_name) {
 
 </head>
 
-<body onload="loadPopupHelper(); load_feet(); FP_preloadImgs(/*url*/&#39;file:///C:/Documents%20and%20Settings/Compaq_Owner/Local%20Settings/Temporary%20Internet%20Files/FrontPageTempDir/button12.jpg&#39;,/*url*/&#39;file:///C:/Documents%20and%20Settings/Compaq_Owner/Local%20Settings/Temporary%20Internet%20Files/FrontPageTempDir/button11.jpg&#39;,/*url*/&#39;file:///C:/Documents%20and%20Settings/Compaq_Owner/Local%20Settings/Temporary%20Internet%20Files/FrontPageTempDir/button15.jpg&#39;,/*url*/&#39;file:///C:/Documents%20and%20Settings/Compaq_Owner/Local%20Settings/Temporary%20Internet%20Files/FrontPageTempDir/button14.jpg&#39;,/*url*/&#39;file:///C:/Documents%20and%20Settings/Compaq_Owner/Local%20Settings/Temporary%20Internet%20Files/FrontPageTempDir/button18.jpg&#39;,/*url*/&#39;file:///C:/Documents%20and%20Settings/Compaq_Owner/Local%20Settings/Temporary%20Internet%20Files/FrontPageTempDir/button17.jpg&#39;,/*url*/&#39;file:///C:/Documents%20and%20Settings/Compaq_Owner/Local%20Settings/Temporary%20Internet%20Files/FrontPageTempDir/button1B.jpg&#39;,/*url*/&#39;file:///C:/Documents%20and%20Settings/Compaq_Owner/Local%20Settings/Temporary%20Internet%20Files/FrontPageTempDir/button1A.jpg&#39;)" style="background-attachment: fixed">
+<body onload="FP_preloadImgs(/*url*/&#39;file:///C:/Documents%20and%20Settings/Compaq_Owner/Local%20Settings/Temporary%20Internet%20Files/FrontPageTempDir/button12.jpg&#39;,/*url*/&#39;file:///C:/Documents%20and%20Settings/Compaq_Owner/Local%20Settings/Temporary%20Internet%20Files/FrontPageTempDir/button11.jpg&#39;,/*url*/&#39;file:///C:/Documents%20and%20Settings/Compaq_Owner/Local%20Settings/Temporary%20Internet%20Files/FrontPageTempDir/button15.jpg&#39;,/*url*/&#39;file:///C:/Documents%20and%20Settings/Compaq_Owner/Local%20Settings/Temporary%20Internet%20Files/FrontPageTempDir/button14.jpg&#39;,/*url*/&#39;file:///C:/Documents%20and%20Settings/Compaq_Owner/Local%20Settings/Temporary%20Internet%20Files/FrontPageTempDir/button18.jpg&#39;,/*url*/&#39;file:///C:/Documents%20and%20Settings/Compaq_Owner/Local%20Settings/Temporary%20Internet%20Files/FrontPageTempDir/button17.jpg&#39;,/*url*/&#39;file:///C:/Documents%20and%20Settings/Compaq_Owner/Local%20Settings/Temporary%20Internet%20Files/FrontPageTempDir/button1B.jpg&#39;,/*url*/&#39;file:///C:/Documents%20and%20Settings/Compaq_Owner/Local%20Settings/Temporary%20Internet%20Files/FrontPageTempDir/button1A.jpg&#39;)" style="background-attachment: fixed">
 
 <p align="center">
     <img border="0" src="./Harstone Electrical Services, Cleveland Ohio_files/harstone.jpg" width="576" height="280"><br>
@@ -537,7 +224,7 @@ document.write(date + ", " + year);
 			</td>
 			<td valign="top">
 				<input type="text" name="name" id="name" size="40" value="">
-				
+
 			</td>
 		</tr>
 		<tr>
@@ -546,7 +233,7 @@ document.write(date + ", " + year);
 			</td>
 			<td valign="top">
 				<input type="text" name="email" id="email" size="40" value="">
-				
+
 			</td>
 		</tr>
 		<tr>
@@ -555,7 +242,7 @@ document.write(date + ", " + year);
 			</td>
 			<td valign="top">
 				<input type="text" name="field-e71cf8cab28df96" id="field-e71cf8cab28df96" size="40" value="">
-				
+
 			</td>
 		</tr>
 		<tr>
@@ -564,7 +251,7 @@ document.write(date + ", " + year);
 			</td>
 			<td valign="top">
 				<input type="text" name="field-b9e1cd02d947d29" id="field-b9e1cd02d947d29" size="40" value="">
-				
+
 			</td>
 		</tr>
 		<tr>
@@ -573,38 +260,20 @@ document.write(date + ", " + year);
 			</td>
 			<td valign="top">
 				<input type="text" name="field-9181d79a811425a" id="field-9181d79a811425a" size="40" value="">
-				
+
 			</td>
 		</tr>
-                <tr>
-                  <td colspan=2>
-                    <a onclick="toggle_show('item_picker')" class='hide_link'>Hide/Show Table</a>
-			<div id='item_picker' class='item_picker' >
-			  <div id='popup_table' class='popup_table'></div>
-			</div>
-
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan=2>
-                    <a onclick="toggle_show('feet_picker')" class='hide_link'>Hide/Show Table</a>
-			<div id='feet_picker' class='feet_picker' >
-			  <div id='feet_table' class='feet_table'></div>
-			</div>
-
-                  </td>
-                </tr>
 		<tr>
 			<td valign="top">
 				<strong>Parts used: <br>
-				<font size="2">Make sure you put commas after the part and it's 
+				<font size="2">Make sure you put commas after the part and it's
 				amount <br>
-				( EXAMPLE ) 1/2" EMT -20', 1/2" EMT Box Fittings -4, 4" Metal 
+				( EXAMPLE ) 1/2" EMT -20', 1/2" EMT Box Fittings -4, 4" Metal
 				Boxes -2 </font> </strong>
 	 		</td>
 			<td valign="top">
-				<textarea name="field-dcadf34b4948181" id="field-dcadf34b4948181" rows="6" cols="40"></textarea>
-				
+				<textarea name="field-dcadf34b4948181" id="field-dcadf34b4948181" rows="6" cols="40" onclick="$('#myModal').modal()"></textarea>
+
 			</td>
 		</tr>
 		<tr>
@@ -613,7 +282,7 @@ document.write(date + ", " + year);
 			</td>
 			<td valign="top">
 				<textarea name="field-1cf3c9d4835527a" id="field-1cf3c9d4835527a" rows="6" cols="40"></textarea>
-				
+
 			</td>
 		</tr>
 		<tr>
@@ -625,8 +294,185 @@ document.write(date + ", " + year);
 </form>
 <br>
 
+<style>
+  #parts_used {
+    height: 100%;
+  }
+
+  #parts_lists {
+    border-left: 1px solid gray;
+  }
+
+  .part_button {
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    float: left;
+    height: 50px;
+    margin: 0 10px 10px 0;
+    padding: 5px;
+    text-align: center;
+    width: 100px;
+  }
+
+  .part_button:hover {
+    background-color: #EEEEEE;
+    border: 1px solid #111111;
+  }
+
+</style>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class='row'>
+          <div id='parts_used' class='col-md-4'>
+          </div>
+          <div id='parts_lists' class='col-md-8'>
+
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      By Qty
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div id='part_container' class="panel-body">
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      By Length
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="update_parts_submit"  type="button" class="btn btn-primary" onClick='updatePartsBox()'>Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  #part_counter_dialog {
+    width: 275px;
+  }
+
+  #part_counter {
+    text-align: center;
+  }
+
+  #part_count {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100px;
+  }
+
+  .size_selectors {
+    margin-bottom: 10px;
+  }
+
+  .size_selector {
+    width: 75px;
+  }
+</style>
+
+<script language="javaScript">
+  var added_parts = [];
+
+  function add_parts() {
+    var name = $('#part_name').html();
+    var count = $('#part_count').val();
+    var size = $('.size_selector.active').html();
+
+    added_parts.push({ 'name':name, 'count':count, 'size':size });
+    update_used_parts();
+
+    $('.size_selector').removeClass('active');
+    $('#part_count').val(1)
+    $('#partModal').modal('hide');
+  }
+
+  function update_used_parts() {
+    var inner = '';
+
+    $.each(added_parts, function(index, value) {
+      inner += "<div class='used_part'>" + value.size + ' ' + value.name + ' -' + value.count + "</div>";
+    });
+
+    $('#parts_used').html(inner);
+  }
+
+  function updatePartsBox() {
+    var part_strings = [];
+
+    $('.used_part').each(function() {
+      part_strings.push($(this).html());
+    });
+
+    $('#field-dcadf34b4948181').html(part_strings.join());
+    $('#myModal').modal('hide');
+  }
+</script>
+
+<!-- Modal -->
+<div class="modal fade" id="partModal" tabindex="-1" role="dialog" aria-labelledby="partModalLabel" aria-hidden="true">
+  <div class="modal-dialog" id='part_counter_dialog'>
+    <div class="modal-content">
+      <div class="modal-body" id='part_counter'>
+        <div id='part_name'></div>
+				<input type="number" name="part_count" id="part_count" size="40" value="1">
+
+        <div class="btn-toolbar" role="toolbar">
+          <div class="btn-group size_selectors" role="group">
+            <button type="button" class="btn btn-default size_selector">1/2"</button>
+            <button type="button" class="btn btn-default size_selector">3/4"</button>
+            <button type="button" class="btn btn-default size_selector">1"</button>
+          </div>
+          <div class="btn-group size_selectors" role="group">
+            <button type="button" class="btn btn-default size_selector">1 1/2"</button>
+            <button type="button" class="btn btn-default size_selector">1 3/4"</button>
+            <button type="button" class="btn btn-default size_selector">2"</button>
+          </div>
+          <div class="btn-group size_selectors" role="group">
+            <button type="button" class="btn btn-default size_selector">2 1/2"</button>
+            <button type="button" class="btn btn-default size_selector">2 3/4"</button>
+            <button type="button" class="btn btn-default size_selector">3"</button>
+          </div>
+          <div class="btn-group size_selectors" role="group">
+            <button type="button" class="btn btn-default size_selector">3 1/2"</button>
+            <button type="button" class="btn btn-default size_selector">3 3/4"</button>
+            <button type="button" class="btn btn-default size_selector">4"</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id='add_part_submit' type="button" class="btn btn-primary disabled" onClick='add_parts()'>Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <p align="center">
-<a href="http://www.harstone.com/EMPLOYEEDAILYREPORTCALENDARFORM.html">CLICK HERE 
+<a href="http://www.harstone.com/EMPLOYEEDAILYREPORTCALENDARFORM.html">CLICK HERE
 FOR EMPLOYEE DAILY HOUR REPORT</a></p>
 
 <font face="arial"><b>
@@ -661,3 +507,30 @@ document.write(date + ", " + year);
 <!-- text below generated by server. PLEASE REMOVE --><!-- Counter/Statistics data collection code --><script language="JavaScript" src="./Harstone Electrical Services, Cleveland Ohio_files/whv2_001.js"></script><script language="javascript">geovisit();</script><img border="0" style="display:none" src="./Harstone Electrical Services, Cleveland Ohio_files/visit.gif">
 <noscript>&lt;img src="http://visit.webhosting.yahoo.com/visit.gif?us1321710523" alt="setstats" border="0" width="1" height="1"&gt;</noscript></body></html>
 
+
+<script language="JavaScript">
+  var parts = ["EMT_conduit", "rigid_aluminum", "rigid_galav", "PVC", "greenfield", "sealtite", "unistrut_shallow", "unistrut_deep",
+      "1_hole_straps", "box_connectors", "couplings", "min_lax", "strut_clip", "straight_fitting", "90_*_fitting",
+      "threaded_rod"];
+
+  var orig = '';
+
+  for (i = 0; i < parts.length; i++) {
+    orig += '<div class="part_button" onclick="select_part(\'' + parts[i] + '\')">' + parts[i].replace(/_/g, ' ') + "</div>";
+
+  }
+
+  $('#part_container').html(orig);
+
+  function select_part(part) {
+    $('#part_name').html(part);
+    $('#partModal').modal();
+  }
+
+$('.size_selector').click(function(event) {
+    $('.size_selector').removeClass('active');
+    $(event.target).addClass('active');
+
+    $('#add_part_submit').removeClass('disabled');
+  } );
+</script>
