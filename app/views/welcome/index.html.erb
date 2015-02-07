@@ -52,7 +52,12 @@ function FP_getObjectByID(id,o) {//v1.0
 var types = ["EMT_conduit", "rigid_aluminum", "rigid_galav", "PVC", "greenfield", "sealtite", "unistrut_shallow", "unistrut_deep",
              "1_hole_straps", "box_connectors", "couplings", "min_lax", "strut_clip", "straight_fitting", "90_*_fitting",
              "threaded_rod"];
+
 var sizes = ["1/2in", "3/4in", "1in", "1_1/2in", "1_3/4in", "2in", "2_1/2in", "2_3/4in", "3in", "3_1/2in", "3_3/4in", "4in"];
+
+var ft_types = ['#_16_THHN', '#_14_THHN', '#_12_THHN', '#_10_THHN', '#_8_THHN', '#_6_THHN', '#_4_THHN', '#_3_THHN', '#_2_THHN', 
+                '#_1_THHN', '1_OT', '2_OT', '3_OT', '4_OT', 'MCM_250', 'MCM_300', 'MCM_350', 'MCM_500', 'MCM_600', 'MCM_750', 'MCM_750',
+                '14/2', '14/3', '12/2', '12/3', '12/4', '10/2', '10/3', '10/4'];
 
 var feet_types = new Array();
 feet_types['#_16_THHN'] = 0.10;
@@ -303,7 +308,7 @@ document.write(date + ", " + year);
     border-left: 1px solid gray;
   }
 
-  .part_button {
+  .part_button, .ft_part_button {
     border: 1px solid #CCCCCC;
     border-radius: 5px;
     float: left;
@@ -314,7 +319,7 @@ document.write(date + ", " + year);
     width: 100px;
   }
 
-  .part_button:hover {
+  .part_button:hover, .ft_part_button:hover {
     background-color: #EEEEEE;
     border: 1px solid #111111;
   }
@@ -354,7 +359,7 @@ document.write(date + ", " + year);
                   </h4>
                 </div>
                 <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                  <div class="panel-body">
+                  <div id="ft_part_container" class="panel-body">
                   </div>
                 </div>
               </div>
@@ -411,11 +416,27 @@ document.write(date + ", " + year);
     $('#partModal').modal('hide');
   }
 
+  function add_ft_parts() {
+    var name = $('#ft_part_name').html();
+    var count = $('#ft_part_count').val() + '\'';
+
+    added_parts.push({ 'name':name, 'count':count });
+    update_used_parts();
+
+    $('#ft_part_count').val(1)
+    $('#ftPartModal').modal('hide');
+  }
+
   function update_used_parts() {
     var inner = '';
 
     $.each(added_parts, function(index, value) {
-      inner += "<div class='used_part'>" + value.size + ' ' + value.name + ' -' + value.count + "</div>";
+      inner += "<div class='used_part'>"
+      if(value.size) {
+        inner += value.size + ' '; 
+      }
+
+      inner += value.name.replace(/_/g, ' ') + ' -' + value.count + "</div>";
     });
 
     $('#parts_used').html(inner);
@@ -471,6 +492,21 @@ document.write(date + ", " + year);
   </div>
 </div>
 
+<div class="modal fade" id="ftPartModal" tabindex="-1" role="dialog" aria-labelledby="ftPartModalLabel" aria-hidden="true">
+  <div class="modal-dialog" id='ft_part_counter_dialog'>
+    <div class="modal-content">
+      <div class="modal-body" id='ft_part_counter'>
+        <div id='ft_part_name'></div>
+				<input type="number" name="ft_part_count" id="ft_part_count" size="40" value="1">
+        <span>'</span>
+      </div>
+      <div class="modal-footer">
+        <button id='add_ft_part_submit' type="button" class="btn btn-primary" onClick='add_ft_parts()'>Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <p align="center">
 <a href="http://www.harstone.com/EMPLOYEEDAILYREPORTCALENDARFORM.html">CLICK HERE
 FOR EMPLOYEE DAILY HOUR REPORT</a></p>
@@ -513,18 +549,31 @@ document.write(date + ", " + year);
       "1_hole_straps", "box_connectors", "couplings", "min_lax", "strut_clip", "straight_fitting", "90_*_fitting",
       "threaded_rod"];
 
-  var orig = '';
+  var ft_parts = ['#_16_THHN', '#_14_THHN', '#_12_THHN', '#_10_THHN', '#_8_THHN', '#_6_THHN', '#_4_THHN', '#_3_THHN', '#_2_THHN', 
+      '#_1_THHN', '1_OT', '2_OT', '3_OT', '4_OT', 'MCM_250', 'MCM_300', 'MCM_350', 'MCM_500', 'MCM_600', 'MCM_750', 'MCM_750',
+      '14/2', '14/3', '12/2', '12/3', '12/4', '10/2', '10/3', '10/4'];
 
+  var orig = '';
   for (i = 0; i < parts.length; i++) {
     orig += '<div class="part_button" onclick="select_part(\'' + parts[i] + '\')">' + parts[i].replace(/_/g, ' ') + "</div>";
-
   }
-
   $('#part_container').html(orig);
+
+  var ft_orig = '';
+  for (i = 0; i < ft_parts.length; i++) {
+    ft_orig += '<div class="ft_part_button" onclick="select_ft_part(\'' + ft_parts[i] + '\')">' + ft_parts[i].replace(/_/g, ' ') + "</div>";
+  }
+  $('#ft_part_container').html(ft_orig);
+
 
   function select_part(part) {
     $('#part_name').html(part);
     $('#partModal').modal();
+  }
+
+  function select_ft_part(part) {
+    $('#ft_part_name').html(part);
+    $('#ftPartModal').modal();
   }
 
 $('.size_selector').click(function(event) {
